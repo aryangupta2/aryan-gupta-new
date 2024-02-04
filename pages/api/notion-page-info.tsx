@@ -4,7 +4,6 @@ import got from 'got'
 import { PageBlock } from 'notion-types'
 import {
   getBlockIcon,
-  getBlockTitle,
   getPageProperty,
   isUrl,
   parsePageId
@@ -48,7 +47,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const isBlogPost =
     block.type === 'page' && block.parent_table === 'collection'
-  const title = getBlockTitle(block, recordMap) || libConfig.name
 
   const imageCoverPosition =
     (block as PageBlock).format?.page_cover_position ??

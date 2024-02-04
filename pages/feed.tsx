@@ -3,7 +3,6 @@ import type { GetServerSideProps } from 'next'
 import { ExtendedRecordMap } from 'notion-types'
 import {
   getBlockParentPage,
-  getBlockTitle,
   getPageProperty,
   idToUuid
 } from 'notion-utils'
@@ -53,7 +52,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       continue
     }
 
-    const title = getBlockTitle(block, recordMap) || config.name
     const description =
       getPageProperty<string>('Description', block, recordMap) ||
       config.description
@@ -72,7 +70,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     const socialImageUrl = getSocialImageUrl(pageId)
 
     feed.item({
-      title,
       url,
       date,
       description,
