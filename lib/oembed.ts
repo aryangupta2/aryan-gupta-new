@@ -17,7 +17,7 @@ export const oembed = async ({
   // TODO: handle pages with no pageId via domain
   const pageId = parsePageId(url)
 
-  let title = config.name
+  const title = config.name
   let authorName = config.author
 
   // TODO: handle errors gracefully
