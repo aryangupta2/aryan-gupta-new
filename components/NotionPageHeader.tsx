@@ -41,7 +41,7 @@ const ResumeButton = () => {
   }, []);
 
   // URL to resume in local Notion file storage
-  const resumeViewUrl = 'https://file.notion.so/f/f/41ad14f8-d2a5-4b1a-b182-c66a02e1ef17/277a0cc6-151e-4b44-9ce7-d220bb121859/Aryan_Gupta_Resume.pdf?id=5c39ef59-d541-4dc9-9574-72efec2af323&table=block&spaceId=41ad14f8-d2a5-4b1a-b182-c66a02e1ef17&expirationTimestamp=1707782400000&signature=I7hXBVDqiAnHQsvDRmo4QPyZcF6Te765uZ-tfpYeHe8&downloadName=Aryan+Gupta+Resume.pdf';
+  const resumeViewUrl = 'https://drive.google.com/file/d/1c_unWg6pMH-F_6fn_WCyoehETV7rq4mX/view?usp=share_link';
 
   const viewResume = () => {
     window.open(resumeViewUrl, '_blank');
